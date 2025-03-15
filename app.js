@@ -36,6 +36,11 @@ app.disable('x-powered-by') // deshabilitar el header X-Powered-By: Express
 // OPTIONS
 
 // Todos los recursos que sean MOVIES se identifica con /movies
+
+app.get('/', (req, res) => {
+  return res.json({ message: 'Welcome to movies API' })
+})
+
 app.get('/movies', (req, res) => {
   const { genre } = req.query
   if (genre) {
