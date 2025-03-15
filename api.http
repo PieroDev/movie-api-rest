@@ -1,0 +1,44 @@
+### Get all movies
+get http://localhost:3000/movies
+
+### Get a movie by id
+get http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Get all movies by genre
+get http://localhost:3000/movies?genre=Drama
+
+### Create a movie
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "Parasite",
+    "year": 2020,
+    "director": "Bong Joon-ho",
+    "duration": 132,
+    "genre": ["Comedy", "Drama", "Thriller"],
+    "rate": 8,
+    "poster": "https://m.media-amazon.com/images/M/MV5BYjk1Y2U4MjQtY2ZiNS00OWQyLWI3MmYtZWUwNmRjYWRiNWNhXkEyXkFqcGc@._V1_FMjpg_UY3556_.jpg"
+}
+
+###Update a movie
+PATCH http://localhost:3000/movies/413cf242-7eff-4699-8570-9fb4fef64ed0
+Content-Type: application/json
+
+{
+    "title": "Parasite",
+    "year": 2019,
+    "director": "Bong Joon-ho",
+    "duration": 132,
+    "genre": ["Comedy", "Drama"],
+    "rate": 10,
+    "poster": "https://m.media-amazon.com/images/M/MV5BYjk1Y2U4MjQtY2ZiNS00OWQyLWI3MmYtZWUwNmRjYWRiNWNhXkEyXkFqcGc@._V1_FMjpg_UY3556_.jpg"
+}
+
+###Update a movie partialy
+PATCH http://localhost:3000/movies/413cf242-7eff-4699-8570-9fb4fef64ed0
+Content-Type: application/json
+
+{
+    "genre": ["Comedy", "Drama", "Thriller", "Mystery", "ASD"]
+}
