@@ -22,7 +22,7 @@ Content-Type: application/json
 }
 
 ###Update a movie
-PATCH http://localhost:3000/movies/413cf242-7eff-4699-8570-9fb4fef64ed0
+PATCH http://localhost:3000/movies/192e4699-932b-4689-94d6-12ce883f6e29
 Content-Type: application/json
 
 {
@@ -36,9 +36,9 @@ Content-Type: application/json
 }
 
 ###Update a movie partialy
-PATCH http://localhost:3000/movies/413cf242-7eff-4699-8570-9fb4fef64ed0
+PATCH http://localhost:3000/movies/9c4c12fe-7914-4530-af5e-2762c5623484
 Content-Type: application/json
 
 {
-    "genre": ["Comedy", "Drama", "Thriller", "Mystery", "ASD"]
+    "genre": ["Comedy", "Drama", "Thriller", "action"]
 }

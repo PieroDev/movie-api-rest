@@ -1,4 +1,9 @@
 {
+  "name": "express-api",
+  "version": "1.0.0",
+  "description": "A simple Express API",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
