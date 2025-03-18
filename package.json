@@ -8,8 +8,10 @@
     "start": "node app.js",
     "start:mysql": "node server-with-mysql.js",
     "start:local": "node server-with-local.js",
+    "start:mongodb": "node server-with-mongodb.js",
     "dev:start:mysql": "node --watch server-with-mysql.js",
     "dev:start:local": "node --watch server-with-local.js",
+    "dev:start:mongodb": "node --watch server-with-mongodb.js",
     "dev": "nodemon app.js"
   },
   "devDependencies": {

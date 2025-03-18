@@ -5,7 +5,7 @@ get http://localhost:3000/movies
 get http://localhost:3000/movies/1ca80c4e-036d-11f0-98d3-18c04d885ab8
 
 ### Get all movies by genre
-get http://localhost:3000/movies?genre=Drama
+get http://localhost:3000/movies?genre=Comedy
 
 ### Create a movie
 POST http://localhost:3000/movies
