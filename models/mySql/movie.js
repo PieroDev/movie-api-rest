@@ -15,9 +15,8 @@ const connection = await mysql.createConnection(connString)
 
 export class MovieModel {
   static async getAll ({ genre }) {
-    const [movies] = await connection.query('SELECT *, BIN_TO_UUID(id) FROM movie')
-    console.log([movies])
-    return [movies]
+    const [movies] = await connection.query('SELECT BIN_TO_UUID(id) id, title, year, director, duration, poster, rate FROM movie')
+    return movies
   }
 
   static async getById ({ id }) {
@@ -41,7 +40,7 @@ export class MovieModel {
 
     const [newUuid] = await connection.query('SELECT UUID() uuid;')
     const [{ uuid }] = newUuid
-    console.log({ uuid })
+    // console.log({ uuid })
     try {
       await connection.query(`
             INSERT INTO movie (id, title, year, director, duration, poster, rate)
